@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Junjie Ma</title>
+<meta name="description" content="Junjie Ma — M.S. student in Artificial Intelligence at George Mason University. Research on traceable multi-agent AI systems, computer vision, and robotics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="#top">Junjie Ma</a>
+    <div class="links">
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Junjie Ma</h1>
+      <p class="role">M.S. in Artificial Intelligence · George Mason University</p>
+      <p class="lead">
+        I build AI systems whose outputs can be checked. My work combines multi-agent
+        LLM pipelines, computer vision, and structured data so that every claim in a
+        system's report can be traced back to the image region, database record, or
+        source document that supports it. I am applying to Ph.D. programs for Fall 2027
+        in computer science, AI, and robotics.
+      </p>
+      <div class="tags">
+        <span>Multi-agent systems</span>
+        <span>Traceable AI</span>
+        <span>Computer vision</span>
+        <span>Infrastructure inspection</span>
+        <span>Robotics &amp; UAVs</span>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="mailto:jma21@gmu.edu">Email me</a>
+        <a class="btn" href="#research">See research</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="news">
+    <h2>News</h2>
+    <ul>
+      <li><time>Jan 2027</time><span>Presenting <em>Bridge Defect Scoper</em> at the 106th Transportation Research Board (TRB) Annual Meeting, Washington, DC.</span></li>
+      <li><time>Dec 2026</time><span>Expected completion of the M.S. in Artificial Intelligence at GMU.</span></li>
+      <li><time>Sep 2026</time><span>Started the capstone project on auditable clinical-trial document checking, and joined the UAV prototyping course at the GMU MIX Lab.</span></li>
+    </ul>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+    <article class="card feature">
+      <p class="eyebrow">Accepted · TRB Annual Meeting 2027</p>
+      <h3>Bridge Defect Scoper: Vertical Instantiation of Multi-Agent Framework for Controlled and Traceable Bridge Assessment</h3>
+      <p class="authors"><strong>Junjie Ma</strong>, Duoduo Liao</p>
+      <p>
+        <strong>Question.</strong> Can an AI system combine a defect seen in an inspection image
+        with engineering guidance and bridge records, and then show which evidence supports each
+        claim in its report?
+      </p>
+      <p>
+        <strong>System.</strong> Built on the AgentMaster planning–execution–reporting architecture,
+        a planner routes each task to specialized components: YOLO-based visual defect detection,
+        retrieval from engineering references, text-to-SQL queries over bridge databases, and risk
+        assessment. A reporting agent assembles the evidence from those outputs.
+      </p>
+      <p>
+        <strong>My role.</strong> Collected and prepared the data, developed and tuned the visual
+        defect models, co-designed and implemented the system, and co-analyzed results and co-wrote
+        the manuscript.
+      </p>
+      <div class="metrics">
+        <div><span class="num">91.36%</span><span class="lbl">end-to-end report score on a 50-task benchmark</span></div>
+        <div><span class="num">94.0%</span><span class="lbl">text-to-SQL accuracy with routing (87.2% standalone)</span></div>
+        <div><span class="num">0.495</span><span class="lbl">mAP@0.5 on a four-class bridge defect dataset</span></div>
+      </div>
+      <p class="muted">
+        <strong>Next.</strong> Hold out entire structures and capture conditions during evaluation,
+        measure small-defect recall at fixed precision, and test whether each report claim can be
+        traced to its supporting image region, query result, or source passage.
+      </p>
+    </article>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <article class="card">
+        <p class="eyebrow">Capstone · Sep 2026 – present</p>
+        <h3>Clinical Trial Site-Startup Packet Checker</h3>
+        <p>An auditable pipeline that validates clinical-trial startup packets: PDF/OCR processing,
+        LLM-based classification and extraction, and deterministic rule checks, with traceable
+        evidence and human review for uncertain cases. I own ingestion and extraction (hashing,
+        normalization, OCR, prompt design, schema validation) and help build test data and evaluation tools.</p>
+        <p class="stack">Python · LLMs · OCR</p>
+      </article>
+      <article class="card">
+        <p class="eyebrow">MIX Lab, GMU · Sep 2026 – present</p>
+        <h3>UAV Prototyping</h3>
+        <p>Team-based drone prototyping covering control systems and hardware integration:
+        Arduino, servo PWM, ultrasonic sensing, and PID control, moving on to airframe
+        customization, assembly, and flight testing.</p>
+        <p class="stack">Arduino · PID control · Digital fabrication</p>
+      </article>
+      <article class="card">
+        <p class="eyebrow">Individual project · Spring 2026</p>
+        <h3>Ethical Risks of Civilian UAVs in the Low-Altitude Economy</h3>
+        <p>Analyzed ethical risks of civilian UAV deployment and compared regulatory frameworks in
+        China and the United States, identifying policy gaps and unresolved challenges.</p>
+        <p class="stack">UAV policy · Ethics</p>
+      </article>
+      <article class="card">
+        <p class="eyebrow">National Security Innovation Network · 2024 – 2025</p>
+        <h3>Redundant Schema Detection for Air Force Readiness Data</h3>
+        <p>Interviewed U.S. Air Force end users about data-integration problems, then built a
+        semantic-similarity prototype with GloVe embeddings and FAISS to find redundant table
+        schemas, tested on AWS-hosted datasets.</p>
+        <p class="stack">Python · Java · FAISS · AWS</p>
+      </article>
+      <article class="card">
+        <p class="eyebrow">TU Wien, Austria · Summer 2024</p>
+        <h3>Pixel-Art Game on Austrian Culture</h3>
+        <p>Led a four-person team building a Unity game with agile methods; created the pixel-art
+        assets and contributed gameplay programming.</p>
+        <p class="stack">Unity · C# · Aseprite</p>
+      </article>
+      <article class="card">
+        <p class="eyebrow">Secure Programming · Spring 2025</p>
+        <h3>AES Secure Transmit</h3>
+        <p>A client–server system for encrypted message transmission using AES symmetric encryption.</p>
+        <p class="stack">Security · Networking</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <ol class="timeline">
+      <li>
+        <div class="when">Dec 2024 – Jan 2025</div>
+        <div>
+          <h3>Huize Holding (NASDAQ: HUIZ)</h3>
+          <p class="sub">Intern, R&amp;D Middle-Platform Team · Chengdu</p>
+          <p>Worked with shared-service architecture and enterprise databases; supported an external compliance review and software releases.</p>
+        </div>
+      </li>
+      <li>
+        <div class="when">Feb 2022 – Aug 2022</div>
+        <div>
+          <h3>PwC</h3>
+          <p class="sub">Intern, Cloud Services – Digital &amp; Consulting, AI Team · Shanghai</p>
+          <p>Built an RPA information-gathering tool and helped develop and test a Python predictive model for the medical field using human-in-the-loop refinement.</p>
+        </div>
+      </li>
+    </ol>
+
+    <h2 class="sub-h">Education</h2>
+    <ol class="timeline">
+      <li>
+        <div class="when">2025 – Dec 2026 (expected)</div>
+        <div>
+          <h3>M.S. in Artificial Intelligence</h3>
+          <p class="sub">George Mason University, Fairfax, VA</p>
+        </div>
+      </li>
+      <li>
+        <div class="when">Jul 2025</div>
+        <div>
+          <h3>B.S. in Computer Science</h3>
+          <p class="sub">George Mason University, Fairfax, VA</p>
+        </div>
+      </li>
+    </ol>
+
+    <h2 class="sub-h">Skills</h2>
+    <dl class="skills">
+      <dt>AI</dt><dd>AI agents and agent harnesses, multi-agent systems, computer vision, RAG, text-to-SQL, RPA</dd>
+      <dt>Languages</dt><dd>Python, Java, JavaScript, C, C++, C#, MATLAB</dd>
+      <dt>Tools</dt><dd>AWS, Databricks, Docker, GitHub, Unity, Blender</dd>
+      <dt>Hardware</dt><dd>Arduino, 3D printing, digital fabrication</dd>
+    </dl>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>I'm happy to talk about research, Ph.D. opportunities, or collaboration.</p>
+    <p><a href="mailto:jma21@gmu.edu">jma21@gmu.edu</a></p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© 2026 Junjie Ma · Last updated November 2026</p>
+</footer>
+</body>
+</html>
